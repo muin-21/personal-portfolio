@@ -1,0 +1,379 @@
+/* --- CSS VARIABLES --- */
+:root {
+    --bg-dark: #12121e;
+    --text-light: #f0f0f0;
+    --primary-blue: #007bff;
+    --accent-green: #16bf78; /* Color similar to the dot in your image */
+    --accent-purple: #8c56cc;
+    --border-grey: #3f3f3f;
+    --padding-base: 20px;
+    --max-width: 1200px;
+}
+
+/* --- BASE STYLES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--accent-purple);
+}
+
+/* --- HEADER / NAVIGATION --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 15px var(--padding-base);
+    border-bottom: 1px solid var(--border-grey);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-link {
+    font-weight: 600;
+}
+
+.nav-toggle {
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none; /* Hide on desktop */
+}
+
+/* --- SECTION LAYOUT --- */
+.main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--padding-base);
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--accent-green);
+    margin-bottom: 20px;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    min-height: 80vh;
+}
+
+.hero-text-content {
+    flex: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.greeting {
+    font-size: 1.2rem;
+    color: var(--text-light);
+}
+
+.title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin: 5px 0;
+}
+
+.subtitle {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--accent-purple);
+    margin-bottom: 15px;
+}
+.subtitle1 {
+    font-weight: 600;
+    color: var(--accent-purple);
+    margin-bottom: 15px;
+}
+
+.role-highlight {
+    color: var(--accent-green);
+}
+
+.description-text {
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+/* Social Links */
+.social-links a {
+    margin-right: 15px;
+    font-size: 1.5rem;
+}
+
+/* Action Buttons */
+.action-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.btn {
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.primary-btn {
+    background-color: var(--primary-blue);
+    color: var(--text-light);
+}
+
+.secondary-btn {
+    background-color: transparent;
+    border: 2px solid var(--accent-green);
+    color: var(--accent-green);
+}
+
+/* Visual Content (Code Block and Photo) */
+.w-full{
+width: 310px;
+    height: 310px;
+    border-radius: 51%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.from-indigo-500 {
+    --tw-gradient-from: #6366f1 var(--tw-gradient-from-position);
+    --tw-gradient-to: rgba(99, 102, 241, 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+        --tw-gradient-from-position: ;
+    --tw-gradient-via-position: ;
+    --tw-gradient-to-position: ;
+}
+.bg-gradient-to-r {
+    background-image: linear-gradient(to right, var(--tw-gradient-stops));
+}
+.to-blue-600 {
+    --tw-gradient-to: #2563eb var(--tw-gradient-to-position);
+}
+.hero-visual-content {
+        flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.code-block {
+    background-color: #1e1e1e;
+    color: #ce9178; /* VS Code Orange-Pink */
+    padding: 15px;
+    border-radius: 8px;
+    white-space: pre-wrap;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.photo-container {
+ width: auto;
+    height: auto;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+}
+
+/* --- PROFILE / ABOUT SECTION --- */
+.profile-content {
+    display: flex;
+    justify-content: center;
+}
+
+.profile-card {
+    background-color: #1c212e; /* Slightly lighter dark shade */
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 350px;
+    text-align: center;
+    border: 1px solid var(--border-grey);
+}
+
+.profile-avatar {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid var(--accent-purple);
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.profile-role {
+    color: var(--accent-green);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.profile-tags span {
+    display: inline-block;
+    background-color: var(--border-grey);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin: 5px;
+}
+/* === Socials === */
+.team-socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.2rem;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #fff;
+    color: #111;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    will-change: transform;
+}
+
+.social-link:hover {
+    transform: translateY(-4px) scale(1.05);
+}
+
+/* === Optional platform hover colors === */
+.social-link.fb {
+    background: #1877f2;
+    color: #fff;
+}
+
+.social-link.li {
+    background: #0077B5;
+    color: #fff;
+}
+
+.social-link.ig {
+    background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af);
+    color: #fff;
+}
+
+/* --- FOOTER --- */
+.footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid var(--border-grey);
+    font-size: 0.9rem;
+}
+
+/* --- RESPONSIVENESS (Mobile First) --- */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .hero-text-content {
+        order: 2;
+    }
+
+    .hero-visual-content {
+        order: 1;
+        width: 100%;
+        position: static;
+        min-height: auto;
+    }
+    
+    .photo-container {
+        position: static;
+        margin: 20px auto;
+        transform: none;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.5rem;
+    }
+    
+    /* Mobile Nav */
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background-color: var(--bg-dark);
+        border-top: 1px solid var(--border-grey);
+        padding: 10px 0;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    
+    .nav-menu.active {
+        display: flex;
+    }
+    
+    .nav-link {
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--border-grey);
+    }
+    
+    .nav-toggle {
+        display: block;
+    }
+}
